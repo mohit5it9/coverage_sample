@@ -1,13 +1,57 @@
-language: java
+language: node_js
 
-jdk:
-  - oraclejdk8
-
+env:
+  - Matrix=m1
+  - Matrix=m2
+  - Matrix=m3
+  - Matrix=m4
+  - Matrix=m5
+  - Matrix=m6
+  - Matrix=m7
+  - Matrix=m8
+  - Matrix=m9
+  - Matrix=m10
+  - Matrix=m11
+  - Matrix=m12
+  - Matrix=m13
+  - Matrix=m14
+  - Matrix=m15
+  - Matrix=m16
+  - Matrix=m17
+  - Matrix=m18
+  - Matrix=m19
+  - Matrix=m20
+  - Matrix=m21
+  - Matrix=m22
+  - Matrix=m23
+  - Matrix=m24
+  - Matrix=m25
+  - Matrix=m26
+  - Matrix=m27
+  - Matrix=m28
+  - Matrix=m29
+  - Matrix=m30
+  - Matrix=m31
+  - Matrix=m32
+  - Matrix=m33
+  - Matrix=m34
+  - Matrix=m35
+  - Matrix=m36
+  - Matrix=m37
+  - Matrix=m38
+  - Matrix=m39
+  - Matrix=m40
+  - Matrix=m41
+  - Matrix=m42
+  - Matrix=m43
+  - Matrix=m44
+  - Matrix=m45
+  - Matrix=m46
+  - Matrix=m47
+  - Matrix=m48
+  - Matrix=m49
+  - Matrix=m50
+  
 build:
-  advancedReporting: true
   ci:
-    # Create folders for test and code coverage
-    - mkdir -p shippable/testresults
-    - mkdir -p shippable/codecoverage
-    # - mvn install
-    - cp -r target shippable/codecoverage
+    - printenv
