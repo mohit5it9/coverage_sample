@@ -1,13 +1,65 @@
-language: java
+language: scala
 
-jdk:
-  - oraclejdk8
+scala:
+    - 2.11.0
+    - 2.9.3
+   # - 2.10.5
+    
+env:
+  global:
+    - BOO=Bar
+    - BOO2: newBar
+      BOO3: thirdBar
+    - distribution=centos tag=6.8
+    - distribution: ubuntu 
+      tag: 14.04
+  matrix:
+    - M1=one
+    - M2: two
+    - M3=three
+    - M4=four
+   # - custom: test
+    #- new: env
+     # new1: format
+#matrix:
+#include this version with the env 
+ # include:
+   # - scala: 2.11.0
+      #env: 
+      #  - foo: fubu
+       # - fee=fasa
+        #3- secure: KqwNOBE/is3SNhjOxLScIgMZzU4CArMNJ1FhYLTD6vyfzaFdM4C58nsAfrlf1e5ShqTJ3m+oja0n5HpLp7+Zoj+OgzVuDsGC0+sn54i2YXWZQB2g+QvNhbsyEI83Q6OJobNUkksGv+SXFjO3OlFrb2BDu8tjqKUeBTmaaac1YWanBdTK436mBgXFjLiiU4+YCbD9znxImL43B0wZ41BFPc3KsHKenuN8Ns7ztoGkoY0dJ0EFQQEoTOeTn0DBjTFEAN/HS2kHQeZxloFvMOf1vaKaY7+r11wgK6REA9oqYaojn4PwaZzu4C0sWxtXFTmmS1nwSkdeq8qnDdLyWrhwwg==
+#excludes this version 
+ # exclude:             
+   # - scala: 2.9.3
+     # env:
+       # - M2: two
+       # - custom: test
+
+      
 
 build:
-  advancedReporting: true
+
   ci:
-    # Create folders for test and code coverage
-    - mkdir -p shippable/testresults
-    - mkdir -p shippable/codecoverage
-    # - mvn install
-    - cp -r target shippable/codecoverage
+    - java -version
+    - echo $SHIPPABLE_SCALA_VERSION
+    - echo $BOO
+    - echo $BOO2
+    - echo $BOO3
+    - echo $distribution
+    - echo $tag
+    - echo $foo
+    - echo $fee
+    - echo $encrypt
+    - echo $M1
+    - echo $M3
+    - echo $custom
+    - echo $new
+    - echo $new1
+#integrations:
+#  hub:
+  #  - integrationName: ship-docker
+  #    type: docker
+      
+      
+      
