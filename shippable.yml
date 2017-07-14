@@ -7,19 +7,6 @@ jdk:
 env:
   matrix:
     - FOO1="hi"
-    - FOO2="second"
-    - FOO3="third"
-    - FOO4="fourth"
-    - FOO5="fifth"
-    - FOO6="sixth"
-    - FOO7="7"
-    - FOO8="8"
-    - FOO9="9"
-    - FOO10="10"
-    - FOO11="11"
-    - FOO12="12"
-    - FOO13="13"
-    - FOO14="14"
 
 build:
   advancedReporting: true
